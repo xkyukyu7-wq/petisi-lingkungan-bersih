@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Petisi Jaga Lingkungan</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #eef7f0;
+      color: #23412a;
+    }
+
+    header {
+      background: #2e7d32;
+      color: white;
+      text-align: center;
+      padding: 35px 20px;
+    }
+
+    header h1 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 16px;
+    }
+
+    .container {
+      max-width: 850px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 15px;
+      padding: 25px;
+      margin-bottom: 25px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    }
+
+    .card h2 {
+      color: #2e7d32;
+      margin-bottom: 15px;
+    }
+
+    .card p {
+      line-height: 1.7;
+      margin-bottom: 12px;
+    }
+
+    .target {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    .progress {
+      width: 100%;
+      height: 18px;
+      background: #d7e6d8;
+      border-radius: 20px;
+      overflow: hidden;
+      margin: 10px 0;
+    }
+
+    .progress-bar {
+      height: 100%;
+      width: 0%;
+      background: #43a047;
+      transition: 0.4s;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    input {
+      padding: 13px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 15px;
+    }
+
+    button {
+      padding: 13px;
+      border: none;
+      border-radius: 8px;
+      background: #2e7d32;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #1b5e20;
+    }
+
+    #message {
+      margin-top: 15px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .tips {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+      margin-top: 15px;
+    }
+
+    .tip {
+      background: #f1f8f2;
+      padding: 15px;
+      border-radius: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #1b5e20;
+      color: white;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 25px;
+      }
+
+      .tips {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>🌱 Petisi Jaga Lingkungan</h1>
+    <p>Bersama menjaga bumi untuk masa depan yang lebih baik</p>
+  </header>
+
+  <div class="container">
+
+    <div class="card">
+      <h2>🌍 Mari Jaga Lingkungan!</h2>
+
+      <p>
+        Lingkungan yang bersih dan sehat merupakan tanggung jawab kita bersama.
+        Sampah yang menumpuk, penggunaan plastik berlebihan, dan kurangnya
+        kepedulian terhadap alam dapat menyebabkan berbagai masalah lingkungan.
+      </p>
+
+      <p>
+        Melalui petisi ini, kami mengajak masyarakat untuk lebih peduli terhadap
+        lingkungan dengan mengurangi sampah, menghemat energi, menanam pohon,
+        serta menjaga kebersihan di sekitar kita.
+      </p>
+
+      <p>
+        <strong>
+          Yuk, tanda tangani petisi ini dan tunjukkan kepedulianmu terhadap bumi!
+        </strong>
+      </p>
+
+      <div class="target">
+        <span id="count">0</span> orang telah menandatangani
+        <br>
+        Target: 100 tanda tangan
+      </div>
+
+      <div class="progress">
+        <div class="progress-bar" id="progressBar"></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>✍️ Tanda Tangani Petisi</h2>
+
+      <form id="petitionForm">
+        <input
+          type="text"
+          id="name"
+          placeholder="Masukkan nama kamu"
+          required
+        >
+
+        <input
+          type="text"
+          id="city"
+          placeholder="Kota asal"
+          required
+        >
+
+        <button type="submit">
+          🌱 Tanda Tangani Petisi
+        </button>
+      </form>
+
+      <div id="message"></div>
+    </div>
+
+    <div class="card">
+      <h2>🍃 Cara Menjaga Lingkungan</h2>
+
+      <div class="tips">
+        <div class="tip">
+          ♻️ <strong>Kurangi Sampah</strong><br>
+          Gunakan barang yang dapat digunakan kembali.
+        </div>
+
+        <div class="tip">
+          🌳 <strong>Tanam Pohon</strong><br>
+          Ikut menjaga penghijauan di lingkungan sekitar.
+        </div>
+
+        <div class="tip">
+          💧 <strong>Hemat Air</strong><br>
+          Gunakan air secukupnya dan jangan membuang-buangnya.
+        </div>
+
+        <div class="tip">
+          💡 <strong>Hemat Energi</strong><br>
+          Matikan lampu dan perangkat elektronik yang tidak digunakan.
+        </div>
+
+        <div class="tip">
+          🗑️ <strong>Buang Sampah</strong><br>
+          Selalu membuang sampah pada tempatnya.
+        </div>
+
+        <div class="tip">
+          🚲 <strong>Kurangi Polusi</strong><br>
+          Gunakan transportasi umum atau berjalan kaki jika memungkinkan.
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    🌱 Satu tanda tangan, satu langkah untuk bumi yang lebih baik.
+  </footer>
+
+  <script>
+    let signatures = JSON.parse(
+      localStorage.getItem("signatures")
+    ) || [];
+
+    const form = document.getElementById("petitionForm");
+    const count = document.getElementById("count");
+    const progressBar = document.getElementById("progressBar");
+    const message = document.getElementById("message");
+
+    function updateProgress() {
+      const total = signatures.length;
+      const target = 100;
+
+      count.textContent = total;
+
+      let percentage = (total / target) * 100;
+
+      if (percentage > 100) {
+        percentage = 100;
+      }
+
+      progressBar.style.width = percentage + "%";
+    }
+
+    form.addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const name = document.getElementById("name").value.trim();
+      const city = document.getElementById("city").value.trim();
+
+      if (!name || !city) return;
+
+      signatures.push({
+        name: name,
+        city: city,
+        date: new Date().toLocaleDateString("id-ID")
+      });
+
+      localStorage.setItem(
+        "signatures",
+        JSON.stringify(signatures)
+      );
+
+      message.textContent =
+        "✅ Terima kasih, " + name +
+        "! Tanda tangan kamu berhasil dicatat.";
+
+      message.style.color = "#2e7d32";
+
+      form.reset();
+      updateProgress();
+    });
+
+    updateProgress();
+  </script>
+
+</body>
+</html>
